@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Calculate your bot's speed!</title>
+	</head>
+	<body>
+		<h1>Robot Combat Calculators!</h1>
+		<h2>Calculate your robot's speed!</h2>
+		<form>
+			<label for="motorRPMval">Motor RPM: </label>
+			<input id="motorRPMval" type="number"></input>
+			<label for="gearRatioval">Gear ratio (value over 1): </label>
+			<input id="gearRatioval" type="number"></input>
+			<label for="diameterval">Wheel Diameter(in): </label>
+			<input id="diameterval" type="number"></input>
+		</form>
+		<button onmousedown="calculateSpeed()">Calculate!</button>
+		<h3>Revolutions per minute: <span id="rpmResult">0</span></h3>
+		<h3>Revolutions per second: <span id="rpsResult">0</span></h3>
+		<h3>Circumference: <span id="circumResult">0</span></h3>		
+		<h3>Inches moved per second: <span id="inSecResult">0</span></h3>
+		<h3>Inches moved per minute: <span id="inMinResult">0</span></h3>
+		<h3>Feet moved per second: <span id="ftSecResult">0</span></h3>
+		<h3>Feet moved per minute: <span id="ftMinResult">0</span></h3>
+		<h2>Calculate your robot's battery life and max current!</h2>
+		<form>
+			<label for="ampsNeeded">Amperes needed: </label>
+			<input id="ampsNeeded" type="number"></input>
+			<label for="batteryCap">Battery Capacity(amps): </label>
+			<input id="batteryCap" type="number"></input>
+			<label for="discVal">Discharge: </label>
+			<input id="discVal" type="number"></input>
+		</form>
+		<button onmousedown="calculateLife()">Calculate!</button>
+		<h3>Discharge rate: <span id="discResult">0</span></h3>
+		<h3>Battery Life: <span id="lifeResult">0</span></h3>
+		<script src="botRpmFunction.js"></script>
+		<script src="botLifeFunction.js"></script>
+	</body>
+</html>
